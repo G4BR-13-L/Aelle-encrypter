@@ -4,7 +4,8 @@
   "description": "\"The Electron app to encrypt files offline\"",
   "main": "main.js",
   "scripts": {
-    "start": "electron ."
+    "start": "electron .",
+    "dist:linux":"electron-builder --linux"
   },
   "repository": {
     "type": "git",
@@ -21,5 +22,17 @@
   "homepage": "https://github.com/G4BR-13-L/Aelle-encrypter#readme",
   "devDependencies": {
     "electron": "^9.1.0"
+  },
+  "build":{
+    "appId":"aelle-encrypter.gabriel",
+    "linux":{
+      "target":[
+        "deb",
+        "snap",
+        "rpm"
+      ],
+      "category":"utility"
+    }
   }
 }
+
