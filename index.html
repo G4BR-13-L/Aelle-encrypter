@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="eng">
+
+<!-- Mirrored from secure.freecrypt.org/ by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 29 Jun 2020 00:18:55 GMT -->
+<head>
+    <!--Coded by FreeCrypt.Org-->
+    <meta charset="utf-8" />
+    <title>Ælla</title>
+    <meta name="description" content="Highly secure encryption using AES, SHA and Serpent with no installation needed. Encrypt & Decrypt any file" /> 
+    <meta name="keywords" content="free encryption, file encrypt, advanced online decryption, any filetype, no software download needed, fast free online encryption, online encryption, free encryption, free crypt"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="https://fonts.googleapis.com/css?family=Raleway:400,700" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@500&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet"> 
+    <link href="assets/css/style.css" rel="stylesheet" />
+    <style>
+        input[type="checkbox"] {
+            display: none;
+        }
+
+        input[type="checkbox"] + label {
+            color: #f2f2f2;
+        }
+
+        input[type="checkbox"] + label span {
+            display: inline-block;
+            width: 19px;
+            height: 19px;
+            margin: -2px 10px 0 0;
+            vertical-align: middle;
+            background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/check_radio_sheet.png) left top no-repeat;
+            cursor: pointer;
+        }
+
+        input[type="checkbox"]:checked + label span {
+            background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/check_radio_sheet.png) -19px top no-repeat;
+        }
+
+        .padding0 {
+            padding-right: 10px;
+        }
+
+        .loader {
+            border: 4px solid #f3f3f3;
+            border-radius: 50%;
+            border-top: 4px solid #3498db;
+            width: 16px;
+            height: 16px;
+            -webkit-animation: spin 2s linear infinite; /* Safari */
+            animation: spin 2s linear infinite;
+        }
+
+        /* Safari */
+        @-webkit-keyframes spin {
+            0% {
+                -webkit-transform: rotate(0deg);
+            }
+
+            100% {
+                -webkit-transform: rotate(360deg);
+            }
+        }
+
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <a class="back"></a>
+    <input id="text" type="hidden" value="0" />
+    <div id="stage">
+        <div id="step1">
+            <div class="content">
+                <div id = "serviceName">Ælle</div>
+                <h2>Created by a Nerd</h2>
+                <a class="button encrypt green">Encrypt a file</a>
+                <a class="button decrypt magenta">Decrypt a file</a>
+                <div style="padding: 5px;padding-left: 13px;">
+                    <input type="checkbox" name="ShahidChk" class="selection" id="AES" value="AES" checked="checked">
+                    <label for="AES" class="padding0"><span></span>AES</label>
+
+                    <input type="checkbox" name="ShahidChk" class="selection" id="Sh1" value="Sh1">
+                    <label for="Sh1" class="padding0"><span></span>SHA1</label>
+
+                    <input type="checkbox" name="ShahidChk" class="selection" id="Serpent" value="Serpent">
+                    <label for="Serpent" class="padding0"><span></span>Serpent</label>
+                </div>
+                <br> <br>           
+            </div>
+        </div>
+        <div id="step2">
+            <div class="content if-encrypt">
+                <h1>Select a file to encrypt</h1>
+                <h2>Offline encryption</h2>
+                <a class="button browse blue">Browse</a>
+                <input type="file" id="encrypt-input" />
+                <center id="encryptFileLoader" style="display:none"><div class="loader"></div>Please wait...</center>
+            </div>
+            <div class="content if-decrypt">
+                <h1>Select a file to decrypt</h1>
+                <h2>Only files encrypted by this tool are accepted.</h2>
+                <a class="button browse blue">Browse</a>
+                <input type="file" id="decrypt-input" />
+                <center id="decryptFileLoader" style="display:none"><div class="loader"></div>Please wait...</center>
+            </div>
+        </div>
+        <div id="step3">
+            <div class="content if-encrypt">
+                <h1>Enter a pass phrase</h1>
+                <h2>This phrase will be used as an encryption key. Write it down or remember it; you won't be able to restore the file without it. </h2>
+                <input type="password" />
+                <a class="button process red">Encrypt!</a>
+                <center id="encryptLoader" style="display:none"><div class="loader"></div>Please wait...</center>
+            </div>
+            <div class="content if-decrypt">
+                <h1>Enter the pass phrase</h1>
+                <h2>Enter the pass phrase that was used to encrypt this file. It is not possible to decrypt it without it.</h2>
+                <input type="password" />
+                <a class="button process red">Decrypt!</a>
+                <center id="decryptLoader" style="display:none"><div class="loader"></div>Please wait...</center>
+            </div>
+        </div>
+        <div id="step4">
+            <div class="content">
+                <h1>Your file is ready!</h1>
+                <h2>May the force be with you</h2>
+                <a class="button download green" id="Shahid">Save</a><br>
+                <a class="button2" id="HomeButton">Start Again</a> <br>
+                
+                <!--
+				<a class="button2" id="HomeButton" href="https://freecrypt.org">FreeCrypt.Org</a> 
+            -->
+            <center style="display:none;" id="downloadLoader"><div class="loader"></div>Please wait...</center>
+
+        </div>
+    </div>
+</div>
+    <!--<footer>
+        <a class="tz" href="https://freecrypt.org">Free Online Encryption</a>
+        <div id="tzine-actions"></div>
+        <span class="close"></span>
+    </footer>-->
+    <!-- Include the AES algorithm of the crypto library -->
+    <!--Coded by FreeCrypt.Org-->
+    <script src="assets/js/aes.js"></script>
+    <script src="assets/js/crypto-js.js"></script>
+    <script src="assets/js/serpent_cipherEnc.js"></script>
+    <script src="assets/js/pbkdf2.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="assets/js/script.js"></script>
+    <script src="assets/js/Blob.js"></script>
+    <script src="assets/js/canvas-toBlob.js"></script>    
+    <script src="assets/js/FileSaver.min.js"></script>
+    <script src="assets/js/base64js.min.js"></script>
+    <script src="assets/js/download2.js"></script>
+    <script>
+        window.onload = function () {
+            (function (a) { "use strict"; var b = a.HTMLCanvasElement && a.HTMLCanvasElement.prototype, c = a.Blob && function () { try { return Boolean(new Blob) } catch (a) { return !1 } }(), d = c && a.Uint8Array && function () { try { return (new Blob([new Uint8Array(100)])).size === 100 } catch (a) { return !1 } }(), e = a.BlobBuilder || a.WebKitBlobBuilder || a.MozBlobBuilder || a.MSBlobBuilder, f = (c || e) && a.atob && a.ArrayBuffer && a.Uint8Array && function (a) { var b, f, g, h, i, j; a.split(",")[0].indexOf("base64") >= 0 ? b = atob(a.split(",")[1]) : b = decodeURIComponent(a.split(",")[1]), f = new ArrayBuffer(b.length), g = new Uint8Array(f); for (h = 0; h < b.length; h += 1) g[h] = b.charCodeAt(h); return i = a.split(",")[0].split(":")[1].split(";")[0], c ? new Blob([d ? g : f], { type: i }) : (j = new e, j.append(f), j.getBlob(i)) }; a.HTMLCanvasElement && !b.toBlob && (b.mozGetAsFile ? b.toBlob = function (a, c, d) { d && b.toDataURL && f ? a(f(this.toDataURL(c, d))) : a(this.mozGetAsFile("blob", c)) } : b.toDataURL && f && (b.toBlob = function (a, b, c) { a(f(this.toDataURL(b, c))) })), typeof define == "function" && define.amd ? define(function () { return f }) : a.dataURLtoBlob = f })(this);
+        };
+    </script>
+
+</body>
+
+<!-- Mirrored from secure.freecrypt.org/ by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 29 Jun 2020 00:19:06 GMT -->
+</html>
