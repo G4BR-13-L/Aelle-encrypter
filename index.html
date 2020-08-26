@@ -12,7 +12,7 @@
     <link href="https://fonts.googleapis.com/css?family=Raleway:400,700" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@500&display=swap" rel="stylesheet"> 
     <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet"> 
-    <link href="assets/css/style.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet" />
     <style>
         input[type="checkbox"] {
             display: none;
@@ -150,17 +150,17 @@
     </footer>-->
     <!-- Include the AES algorithm of the crypto library -->
     <!--Coded by FreeCrypt.Org-->
-    <script src="assets/js/aes.js"></script>
-    <script src="assets/js/crypto-js.js"></script>
-    <script src="assets/js/serpent_cipherEnc.js"></script>
-    <script src="assets/js/pbkdf2.js"></script>
+    <script src="js/aes.js"></script>
+    <script src="js/crypto-js.js"></script>
+    <script src="js/serpent_cipherEnc.js"></script>
+    <script src="js/pbkdf2.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-    <script src="assets/js/script.js"></script>
-    <script src="assets/js/Blob.js"></script>
-    <script src="assets/js/canvas-toBlob.js"></script>    
-    <script src="assets/js/FileSaver.min.js"></script>
-    <script src="assets/js/base64js.min.js"></script>
-    <script src="assets/js/download2.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/Blob.js"></script>
+    <script src="js/canvas-toBlob.js"></script>    
+    <script src="js/FileSaver.min.js"></script>
+    <script src="js/base64js.min.js"></script>
+    <script src="js/download2.js"></script>
     <script>
         window.onload = function () {
             (function (a) { "use strict"; var b = a.HTMLCanvasElement && a.HTMLCanvasElement.prototype, c = a.Blob && function () { try { return Boolean(new Blob) } catch (a) { return !1 } }(), d = c && a.Uint8Array && function () { try { return (new Blob([new Uint8Array(100)])).size === 100 } catch (a) { return !1 } }(), e = a.BlobBuilder || a.WebKitBlobBuilder || a.MozBlobBuilder || a.MSBlobBuilder, f = (c || e) && a.atob && a.ArrayBuffer && a.Uint8Array && function (a) { var b, f, g, h, i, j; a.split(",")[0].indexOf("base64") >= 0 ? b = atob(a.split(",")[1]) : b = decodeURIComponent(a.split(",")[1]), f = new ArrayBuffer(b.length), g = new Uint8Array(f); for (h = 0; h < b.length; h += 1) g[h] = b.charCodeAt(h); return i = a.split(",")[0].split(":")[1].split(";")[0], c ? new Blob([d ? g : f], { type: i }) : (j = new e, j.append(f), j.getBlob(i)) }; a.HTMLCanvasElement && !b.toBlob && (b.mozGetAsFile ? b.toBlob = function (a, c, d) { d && b.toDataURL && f ? a(f(this.toDataURL(c, d))) : a(this.mozGetAsFile("blob", c)) } : b.toDataURL && f && (b.toBlob = function (a, b, c) { a(f(this.toDataURL(b, c))) })), typeof define == "function" && define.amd ? define(function () { return f }) : a.dataURLtoBlob = f })(this);
