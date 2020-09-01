@@ -5,7 +5,7 @@
   "main": "main.js",
   "scripts": {
     "start": "electron .",
-    "dist:linux":"electron-builder --linux"
+    "dist:linux": "electron-builder --linux"
   },
   "repository": {
     "type": "git",
@@ -23,16 +23,15 @@
   "devDependencies": {
     "electron": "^9.1.0"
   },
-  "build":{
-    "appId":"aelle-encrypter.gabriel",
-    "linux":{
-      "target":[
+  "build": {
+    "appId": "aelle-encrypter.gabriel",
+    "linux": {
+      "target": [
         "deb",
         "snap",
         "rpm"
       ],
-      "category":"utility"
+      "category": "utility"
     }
   }
 }
-
