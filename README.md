@@ -4,7 +4,7 @@
 É um aplicativo de desktop, desenvolvido usando o Electron para criptografar e descriptografar arquivos. Qualquer arquivo pode ser encriptado, porém o poder de computação exigido é proporcional ao tamanho do arquivo.
 
 ***
-## [Download para Linux](https://github.com/G4BR-13-L/Aelle-encrypter/releases)
+## [Download para Linux](https://github.com/G4BR-13-L/Aelle-encrypter/releases) 🐧
 ***
 ## Captura de tela
 
