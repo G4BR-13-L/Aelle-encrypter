@@ -30,7 +30,7 @@
   },
   "homepage": "https://github.com/G4BR-13-L/Aelle-encrypter#readme",
   "devDependencies": {
-    "electron": "^9.1.0",
+    "electron": "^9.3.0",
     "electron-builder": "^22.8.0",
     "electron-packager": "^15.1.0"
   },
