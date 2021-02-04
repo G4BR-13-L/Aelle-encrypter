@@ -1,6 +1,6 @@
 {
   "name": "aelle-encrypter",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "\"The Electron app to encrypt files offline\"",
   "main": "main.js",
   "scripts": {
@@ -13,8 +13,7 @@
     "build": "electron-packager . --all",
     "dist:linux": "electron-builder --linux",
     "package-linux": "electron-packager .  aelle-encrypter --overwrite --asar=true --platform=linux --arch=x64 --icon=aelle.png --prune=true --out=release-builds",
-    "create-debian-installer":"electron-installer-debian --src release-builds/aelle-encrypter-linux-x64/ --arch amd64 --config debian.json"
-
+    "create-debian-installer": "electron-installer-debian --src release-builds/aelle-encrypter-linux-x64/ --arch amd64 --config debian.json"
   },
   "repository": {
     "type": "git",
@@ -44,5 +43,8 @@
       ],
       "category": "utility"
     }
+  },
+  "dependencies": {
+    "update-electron-app": "^2.0.1"
   }
 }
