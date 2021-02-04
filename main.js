@@ -6,7 +6,7 @@ function createWindow () {
   // Create the browser window.
   const mainWindow = new BrowserWindow({
   	width: 600, 
-  	height: 600, 
+  	height: 700, 
   	icon:__dirname + "/aelle.png",
   	webPreferences: {
   		preload: path.join(__dirname, 'preload.js')
