@@ -7,16 +7,10 @@
 ## [Download para Linux](https://github.com/G4BR-13-L/Aelle-encrypter/releases) 🐧
 ***
 ## Captura de tela
-<html>
-<style>div{
-    background-image:url('somefiles/screenshotv1.png');
-    width:600px;
-    Height:700px;
-    margin: 0 auto;
-    box-align:center;
-}</style>
-<div></div>
-</html>
+
+![Interface image](somefiles/screenshotv1.png)
+
+
 
 ## Building
 
