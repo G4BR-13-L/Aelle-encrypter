@@ -11,17 +11,24 @@
 	font-family: Circular;
 	src: url(../fonts/Circular Std Bold/Circular Std Bold.ttf);
 }
+@font-face {
+	font-family: Neptune;
+	src: url(../fonts/Neptune.otf);
+}
 *{
 	margin:0;
 	padding:0;
 	
 }
 #serviceName{
-	font-family:'Circular', 'Righteous';
-	font-size: 100px;
-	color:#fff;
-	margin-bottom: 40px;
-	text-shadow: 5px 5px 0px #111;
+	margin: 0 auto 80px auto;
+	height: 200px;
+	width: 60%;
+	background-image: url("../img/aelle_icon.png");
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: contain;
+
 }
 
 /*-------------------------
@@ -102,7 +109,7 @@ body{
 	position:absolute;
 	text-align:center;
 	left:0;
-	top:50%;
+	top:40%;
 	width:100%;
 }
 
@@ -167,8 +174,8 @@ body.decrypt .if-decrypt{
 	font-size:18px;
 	margin:10px auto;
 	border-radius: 10px;
-	background-color: #191414;
-	box-shadow: 5px 5px 0px black;
+	background-color: #15181d;
+	box-shadow: 5px 5px 0px #35373d;
 	transition: 0.5s;
 }
 
@@ -319,20 +326,20 @@ body.decrypt .if-decrypt{
 --black: hsla(0, 0%, 0%, 1);}
 
 #step1{
-	background: #1DB954;
+	background: #30853c;
 	/*background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,112,121,1) 50%, rgba(0,212,255,1) 100%); */
 }
 
 body.encrypt #step2{
-	background: #1DB954;
+	background: #30853c;
 }
 
 body.decrypt #step2{
-	background: #1DB954;
+	background: #30853c;
 }
 
 #step3{
-	background: #1DB954;
+	background: #30853c;
 }
 
 #step3 input[type=password]{
